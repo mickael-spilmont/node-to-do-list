@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 app.use(cookieSession({
     name: 'session',
-    keys: ['key1']
+    secret: 'S3cr3tK3y'
 }))
 
 app.use((req, res, next) => {
