@@ -30,5 +30,8 @@ app.get('/todo', (req, res, next) => {
     }
     res.redirect('/todo');
 })
+.use((req, res, next) => {
+    res.redirect('/todo');
+})
 
 app.listen(8080);
