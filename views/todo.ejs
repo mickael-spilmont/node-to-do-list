@@ -1,12 +1,13 @@
 <h1>To do list</h1>
-<p>
-    <% thingsToDo.forEach((item) => { %>
-        <%= item %></br>
+<ul>
+    <% thingsToDo.forEach((item, index) => { %>
+        <li><a href="/todo/delete/<%= index %>">&#10008</a> <%= item %></li>
     <% }) %>
-</p>
+</ul>
+
 
 <form action="/todo/add" method="post" class="add-to-do">
-    <label form="to-do">Thing to do : </label>
-    <input type="text" name="to-do" id="to-do" required>
+    <label form="todo">Thing to do : </label>
+    <input type="text" name="todo" id="todo" required>
     <input type="submit" value="Add">
 </form>
